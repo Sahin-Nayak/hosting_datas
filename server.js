@@ -41,8 +41,8 @@ app.post("/upload", upload.fields([
     return res.status(400).json({ error: "Please upload both a song and an image." });
   }
 
-  const songURL = `http://localhost:${PORT}/uploads/songs/${songFile.filename}`;
-  const imageURL = `http://localhost:${PORT}/uploads/images/${imageFile.filename}`;
+  const songURL = `https://hosting-datas.onrender.com/uploads/songs/${songFile.filename}`;
+  const imageURL = `https://hosting-datas.onrender.com/uploads/images/${imageFile.filename}`;
 
   res.json({ songURL, imageURL });
 });
@@ -54,12 +54,12 @@ app.get("/files", (req, res) => {
 
   const songs = fs.readdirSync(songsDir).map(file => ({
     name: file,
-    url: `http://localhost:${PORT}/uploads/songs/${file}`,
+    url: `https://hosting-datas.onrender.com/uploads/songs/${file}`,
   }));
 
   const images = fs.readdirSync(imagesDir).map(file => ({
     name: file,
-    url: `http://localhost:${PORT}/uploads/images/${file}`,
+    url: `https://hosting-datas.onrender.com/uploads/images/${file}`,
   }));
 
   res.json({ songs, images });
