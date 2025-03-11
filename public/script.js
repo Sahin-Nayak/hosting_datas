@@ -6,15 +6,16 @@ async function fetchUploadedFiles() {
   
       const fileList = document.getElementById("fileList");
       fileList.innerHTML = ""; // Clear existing list
-  
+      var count = 0;
       // Display songs
       data.songs.forEach(song => {
+        count = count + 1;
         const listItem = document.createElement("li");
         const songLink = document.createElement("a");
         songLink.href = song.url;
         songLink.textContent = song.name;
         songLink.target = "_blank";
-        listItem.innerHTML = `<strong>Song:</strong> ${songLink.outerHTML}`;
+        listItem.innerHTML = `<strong>Song ${count} :</strong> ${songLink.outerHTML}`;
         fileList.appendChild(listItem);
       });
   
