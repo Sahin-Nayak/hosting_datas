@@ -22,7 +22,7 @@ body {
     color: #333;
   }
   
-  form {
+/*   form {
     margin-bottom: 20px;
   }
   
@@ -47,11 +47,11 @@ body {
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
-  }
+  } */
   
-  button:hover {
+/*   button:hover {
     background-color: #0056b3;
-  }
+  } */
   
   #uploadedFiles {
     margin-top: 20px;
