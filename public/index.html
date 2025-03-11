@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Storage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Music Storage</h1>
+    <p>Upload songs and images to make them available for embedding.</p>
+
+    <!-- Upload Form -->
+    <form id="uploadForm">
+      <label for="songUpload">Upload Song (MP3):</label>
+      <input type="file" id="songUpload" name="song" accept=".mp3" required>
+      <br>
+      <label for="imageUpload">Upload Image (PNG/JPG):</label>
+      <input type="file" id="imageUpload" name="image" accept=".png,.jpg,.jpeg" required>
+      <br>
+      <button type="submit">Upload</button>
+    </form>
+
+    <!-- Uploaded Files Section -->
+    <div id="uploadedFiles">
+      <h2>Uploaded Files</h2>
+      <ul id="fileList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
