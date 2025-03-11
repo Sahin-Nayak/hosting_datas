@@ -1,7 +1,7 @@
 // Fetch and display all uploaded files when the page loads
 async function fetchUploadedFiles() {
     try {
-      const response = await fetch("http://localhost:5000/files");
+      const response = await fetch("https://hosting-datas.onrender.com/files");
       const data = await response.json();
   
       const fileList = document.getElementById("fileList");
@@ -42,7 +42,7 @@ async function fetchUploadedFiles() {
     formData.append("image", document.getElementById("imageUpload").files[0]);
   
     try {
-      const response = await fetch("http://localhost:5000/upload", {
+      const response = await fetch("https://hosting-datas.onrender.com/upload", {
         method: "POST",
         body: formData,
       });
