@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
     margin-top: 30px;
@@ -7,7 +7,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-  }
+  } */
   
 /*   .container {
     background-color: #fff;
@@ -65,6 +65,7 @@ body {
   #fileList li {
     background-color: #f9f9f9;
     padding: 10px;
+    display: flex;
     border: 1px solid #ddd;
     border-radius: 4px;
     margin-bottom: 10px;
